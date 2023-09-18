@@ -1,0 +1,324 @@
+// app global css in SCSS form
+
+.container-home {
+  margin   : 0 auto;
+  max-width: 1088px;
+  position : absolute;
+  top      : 0;
+  bottom   : 0;
+  left     : 0;
+  right    : 0;
+}
+
+.user-none {
+  user-select: none;
+}
+
+.grid {
+  display: grid
+}
+
+.grid-item {
+  grid-gap             : 24px;
+  grid-template-columns: repeat(6, 1fr);
+
+  .g-item {
+    height  : 200px;
+    position: relative;
+
+    &:hover {
+      &::after {
+        position        : absolute;
+        top             : 0;
+        right           : 0;
+        bottom          : 0;
+        left            : 0;
+        background-color: rgba($color: #000000, $alpha: 0.6);
+        content         : ""
+      }
+
+      .play-icon {
+        display: block !important;
+        z-index: 2;
+      }
+    }
+  }
+}
+
+// 内容填充
+.w-fit {
+  width: fit-content;
+}
+
+.h-fit {
+  height: fit-content;
+}
+
+// 扩大点击范围
+.extendClick {
+  position: relative;
+}
+
+.extendClick::before {
+  content : "";
+  position: absolute;
+  top     : -3px;
+  right   : -3px;
+  bottom  : -3px;
+  left    : -3px;
+}
+
+// 宽高继承
+.w-inherit {
+  width: inherit;
+}
+
+.h-inherit {
+  height: inherit;
+}
+
+//宽高行高0 - 1200
+@for $i from 0 through 1200 {
+  .w-#{$i} {
+    width: 1px * $i;
+  }
+
+  .h-#{$i} {
+    height: 1px * $i;
+  }
+
+  .line-#{$i} {
+    line-height: 1px * $i;
+  }
+}
+
+.top {
+  top: 0
+}
+
+.bottom {
+  bottom: 0
+}
+
+.left {
+  left: 0
+}
+
+.right {
+  right: 0
+}
+
+
+// 滚动相关
+.scroll-y {
+  overflow-y: scroll;
+}
+
+.overflow-hide {
+  overflow: hidden;
+}
+
+.scroll-x {
+  overflow-x: scroll;
+}
+
+// 1px边框
+.bt-1px {
+  border-top: 1px solid #F1F1F1;
+}
+
+.br-1px {
+  border-right: 1px solid #F1F1F1;
+}
+
+.bb-1px {
+  border-bottom: 1px solid #F1F1F1;
+}
+
+.bl-1px {
+  border-left: 1px solid #F1F1F1;
+}
+
+.ba-1px {
+  border: 1px solid #F1F1F1;
+}
+
+// 盒子模型
+.box-border {
+  box-sizing: border-box;
+}
+
+.box-content {
+  box-sizing: content-box;
+}
+
+// 圆角边框
+.rounded-12 {
+  border-radius: 12px;
+}
+
+.rounded-16 {
+  border-radius: 16px;
+}
+
+.rounded-20 {
+  border-radius: 20px;
+}
+
+.rounded-24 {
+  border-radius: 24px;
+}
+
+.rounded {
+  border-radius: 50%;
+}
+
+// 字体大小
+.fz-6 {
+  font-size: 6px;
+}
+
+.fz-8 {
+  font-size: 8px;
+}
+
+.fz-10 {
+  font-size: 10px;
+}
+
+.fz-12 {
+  font-size: 12px;
+}
+
+.fz-16 {
+  font-size: 16px;
+}
+
+.fz-20 {
+  font-size: 20px;
+}
+
+.fz-24 {
+  font-size: 24px;
+}
+
+.fz-30 {
+  font-size: 30px;
+}
+
+.fz-36 {
+  font-size: 36px;
+}
+
+// 重置相关输入框大小高度
+.self-input-xs {
+  height: 24px !important;
+
+  input {
+    height: 24px !important;
+  }
+
+  .q-field__inner {
+    height: 24px !important;
+
+    .q-field__control {
+      height: 24px !important;
+
+      .q-field__prepend {
+        height: 24px !important;
+      }
+
+      .q-field__control-container {
+        height: 24px !important;
+
+        .q-field__native {
+          height: 24px !important;
+        }
+      }
+
+      .q-field__append {
+        height: 24px !important;
+      }
+    }
+  }
+}
+
+.self-input-md {
+  height: 36px !important;
+
+  input {
+    height: 36px !important;
+  }
+
+  .q-field__inner {
+    height: 36px !important;
+
+    .q-field__control {
+      height: 36px !important;
+
+      .q-field__prepend {
+        height: 36px !important;
+      }
+
+      .q-field__control-container {
+        height: 36px !important;
+
+        .q-field__native {
+          height: 36px !important;
+        }
+      }
+
+      .q-field__append {
+        height: 36px !important;
+      }
+    }
+  }
+}
+
+.self-input-lg {
+  height: 48px !important;
+
+  input {
+    height: 48px !important;
+  }
+
+  .q-field__inner {
+    height: 48px !important;
+
+    .q-field__control {
+      height: 48px !important;
+
+      .q-field__prepend {
+        height: 48px !important;
+      }
+
+      .q-field__control-container {
+        height: 48px !important;
+
+        .q-field__native {
+          height: 48px !important;
+        }
+      }
+
+      .q-field__append {
+        height: 48px !important;
+      }
+    }
+  }
+}
+
+// 媒体查询
+@media screen and (max-width: 500px) {
+  .hideElement {
+    display: none;
+  }
+
+  .grid-item {
+    grid-gap             : 10px;
+    grid-template-columns: repeat(3, 1fr);
+
+    .g-item {
+      height: 160px;
+    }
+  }
+}
